@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>javascript之apply，bind，call - Hello! I'm 潘杭彬</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello! I'm 潘杭彬" property="og:site_name">
+  
+    <meta content="javascript之apply，bind，call" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="对apply，bind，call有一定了解，但是每次使用都需要查阅资料，今天小记一篇。" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/apply-bind-call/" property="og:url">
+  
+  
+    <meta content="2018-04-01T13:00:00+08:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/benjamin-pan.github.io/assets/img/software.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="javascript" property="article:tag">
+    
+    <meta content="js" property="article:tag">
+    
+    <meta content="apply" property="article:tag">
+    
+    <meta content="bind" property="article:tag">
+    
+    <meta content="call" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="javascript之apply，bind，call">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/apply-bind-call/">
+  
+  
+    <meta name="twitter:description" content="对apply，bind，call有一定了解，但是每次使用都需要查阅资料，今天小记一篇。">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/benjamin-pan.github.io/assets/img/software.jpg">
+  
+
+	<meta name="description" content="对apply，bind，call有一定了解，但是每次使用都需要查阅资料，今天小记一篇。">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/benjamin-pan.github.io/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/benjamin-pan.github.io/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/benjamin-pan.github.io/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/benjamin-pan.github.io/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/benjamin-pan.github.io/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/benjamin-pan.github.io/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/benjamin-pan.github.io/"><img src="/benjamin-pan.github.io/assets/img/me.jpg" alt="潘杭彬"></a>
+      </div>
+      <div class="author-name">潘杭彬</div>
+      <p>不积跬步无以至千里，不积小流无以成江海</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/artemsheludko" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:benjamin_panpan@hotmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; 潘杭彬</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <img class="page-image" src=/benjamin-pan.github.io/assets/img/software.jpg alt="javascript之apply，bind，call">
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">javascript之apply，bind，call</h1>
+        <div class="page-date"><span>2018, Apr 01&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <h3 id="描述">描述</h3>
+
+<p>apply：在调用一个存在的函数时，你可以为其指定一个 this 对象。 this 指当前对象，也就是正在调用这个函数的对象。 使用 apply， 你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。</p>
+
+<p>call：可以让call()中的对象调用当前对象所拥有的function。你可以使用call()来实现继承：写一个方法，然后让另外一个新的对象来继承它（而不是在新对象中再写一次这个方法）。</p>
+
+<p>bind：bind() 函数会创建一个新函数（称为绑定函数），新函数与被调函数（绑定函数的目标函数）具有相同的函数体（在 ECMAScript 5 规范中内置的call属性）。当新函数被调用时 this 值绑定到 bind() 的第一个参数，该参数不能被重写。绑定函数被调用时，bind() 也接受预设的参数提供给原函数。一个绑定函数也能使用new操作符创建对象：这种行为就像把原函数当成构造器。提供的 this 值被忽略，同时调用时的参数被提供给模拟函数。</p>
+
+<h3 id="使用">使用</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 1、借鸡生蛋</span>
+<span class="kd">function</span> <span class="nx">fn_bind</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kr">arguments</span><span class="p">);</span>
+  <span class="c1">// console.log(arguments.join());  报错没有join方法</span>
+  <span class="c1">// 给arguments添加join方法</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">join</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kr">arguments</span><span class="p">));</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">join</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kr">arguments</span><span class="p">));</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">join</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kr">arguments</span><span class="p">)());</span>
+<span class="p">}</span>
+<span class="nx">fn_bind</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">,</span><span class="s1">'d'</span><span class="p">);</span>
+
+
+<span class="c1">// 2、和this一起使用，绑定上下文,this指向apply和call的第一个参数，不传参默认为全局对象（浏览器：window）</span>
+<span class="kd">var</span> <span class="nx">word</span><span class="o">=</span><span class="s1">'this is window'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">duck</span><span class="o">=</span><span class="p">{</span>
+  <span class="na">word</span><span class="p">:</span><span class="s1">'嘎嘎嘎嘎'</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">cat</span><span class="o">=</span><span class="p">{</span>
+  <span class="na">word</span><span class="p">:</span><span class="s1">'喵喵喵喵'</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">speak</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">word</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">speak</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">duck</span><span class="p">);</span>
+<span class="nx">speak</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">cat</span><span class="p">);</span>
+<span class="nx">speak</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">duck</span><span class="p">);</span>
+<span class="nx">speak</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">cat</span><span class="p">);</span>
+<span class="nx">speak</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nb">window</span><span class="p">);</span>
+<span class="nx">speak</span><span class="p">.</span><span class="nx">call</span><span class="p">();</span>
+
+<span class="c1">// 3、执行函数</span>
+<span class="kd">function</span> <span class="nx">fn</span> <span class="p">(</span><span class="nx">who</span><span class="p">,</span> <span class="nx">word</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">who</span> <span class="o">+</span> <span class="s1">':'</span> <span class="o">+</span> <span class="nx">word</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">[</span><span class="s1">'duck'</span><span class="p">,</span> <span class="s1">'嘎嘎嘎嘎'</span><span class="p">]);</span>
+<span class="nx">fn</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s1">'cat'</span><span class="p">,</span> <span class="s1">'喵喵喵喵'</span><span class="p">);</span>
+<span class="nx">fn</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s1">'dog'</span><span class="p">,</span> <span class="s1">'汪汪汪汪'</span><span class="p">)();</span>
+</code></pre></div></div>
+
+<h3 id="区别">区别</h3>
+
+<p>call()和apply()，只有一个区别，就是 call()方法接受的是若干个参数的列表，而apply()方法接受的是一个包含多个参数的数组，参照使用3-执行函数。
+call()和bind()，bind()返回的是一个函数需要执行一下，参照使用3-执行函数。</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+        <a href="http://service.weibo.com/share/share.php?url=http://localhost:4000/apply-bind-call/&title=javascript之apply，bind，call" title="分享到微博" rel="nofollow" target="_blank">微博</a>
+          <!-- <a href="https://twitter.com/intent/tweet?text=javascript之apply，bind，call&url=http://localhost:4000/apply-bind-call/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> -->
+          <!-- <a href="https://facebook.com/sharer.php?u=http://localhost:4000/apply-bind-call/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a> -->
+          <!-- <a href="https://plus.google.com/share?url=http://localhost:4000/apply-bind-call/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a> -->
+        </div>
+        <div class="page-tag">
+          
+            <a href="/benjamin-pan.github.io/tags#javascript" class="tag">&#35; javascript</a>
+          
+            <a href="/benjamin-pan.github.io/tags#js" class="tag">&#35; js</a>
+          
+            <a href="/benjamin-pan.github.io/tags#apply" class="tag">&#35; apply</a>
+          
+            <a href="/benjamin-pan.github.io/tags#bind" class="tag">&#35; bind</a>
+          
+            <a href="/benjamin-pan.github.io/tags#call" class="tag">&#35; call</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
