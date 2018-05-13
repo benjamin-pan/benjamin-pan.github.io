@@ -128,9 +128,10 @@
         <div class="page-date"><span>2018, May 13&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
       <p>下雨了！还忘了带伞！你是否跟我一样想过跑着淋雨少还是走着淋雨少？今天我们来揭晓一下答案吧！</p>
-      <button onclick="star()">开始</button>运行完后，改变速度：<input id="step" type="number" step="1" min="1" value="3">米／秒。<span id="getRains"></span>
-  <canvas id="sky"></canvas>
-  <script type="text/javascript">
+
+<p><button onclick="star()">开始</button>运行完后，改变速度：<input id="step" type="number" step="1" min="1" value="3" />米／秒。<span id="getRains"></span></p>
+<canvas id="sky"></canvas>
+<script type="text/javascript">
     var can=document.getElementById('sky');
     can.width=document.body.clientWidth-300;
     can.height=Math.max(document.documentElement.clientHeight-100,500);
@@ -143,7 +144,8 @@
       // ctx.fillRect(0,0,can.width,can.height);
     }
   </script>
-  <script type="text/javascript">
+
+<script type="text/javascript">
     var Rain=function(){
   this.v=[];
   this.x=[];
@@ -201,7 +203,8 @@ Rain.prototype.born=function(){
   // this.time[100]=document.body.clientHeight/this.v[i];
 }
   </script>
-  <script>
+
+<script>
     var imgObj0 = new Image();
     var imgObj1 = new Image();
     var imgObj2 = new Image();
@@ -243,7 +246,8 @@ Rain.prototype.born=function(){
       showRains.innerHTML='一共打到'+rains/time+'个雨点！';
     }
   </script>
-  <script type="text/javascript">
+
+<script type="text/javascript">
     var rainTime;
     function star(){
       time++;
@@ -257,6 +261,7 @@ Rain.prototype.born=function(){
       },60)
     }
   </script>
+
 
       <div class="page-footer">
         <div class="page-share">
