@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>下雨了 - Hello! I'm 潘杭彬</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello! I'm 潘杭彬" property="og:site_name">
+  
+    <meta content="下雨了" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="下雨天没带伞，总是想跑着淋雨多还是走着淋雨多。" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/rain/" property="og:url">
+  
+  
+    <meta content="2018-05-13T20:40:00+08:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/benjamin-pan.github.io/assets/img/me.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="javascript" property="article:tag">
+    
+    <meta content="js" property="article:tag">
+    
+    <meta content="Interesting" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="下雨了">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/rain/">
+  
+  
+    <meta name="twitter:description" content="下雨天没带伞，总是想跑着淋雨多还是走着淋雨多。">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/benjamin-pan.github.io/assets/img/me.jpg">
+  
+
+	<meta name="description" content="下雨天没带伞，总是想跑着淋雨多还是走着淋雨多。">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/benjamin-pan.github.io/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/benjamin-pan.github.io/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/benjamin-pan.github.io/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/benjamin-pan.github.io/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/benjamin-pan.github.io/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/benjamin-pan.github.io/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/benjamin-pan.github.io/"><img src="/benjamin-pan.github.io/assets/img/me.jpg" alt="潘杭彬"></a>
+      </div>
+      <div class="author-name">潘杭彬</div>
+      <p>不积跬步无以至千里，不积小流无以成江海</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/artemsheludko" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:benjamin_panpan@hotmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; 潘杭彬</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">下雨了</h1>
+        <div class="page-date"><span>2018, May 13&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>下雨了！还忘了带伞！你是否跟我一样想过跑着淋雨少还是走着淋雨少？今天我们来揭晓一下答案吧！</p>
+      <button onclick="star()">开始</button>运行完后，改变速度：<input id="step" type="number" step="1" min="1" value="3">米／秒。<span id="getRains"></span>
+  <canvas id="sky"></canvas>
+  <script type="text/javascript">
+    var can=document.getElementById('sky');
+    can.width=document.body.clientWidth-300;
+    can.height=document.documentElement.clientHeight-100;
+    // ctx.beginPath();
+    var ctx=can.getContext('2d');
+    ctx.fillStyle='rgba(0,0,0,0)';
+    // ctx.fillRect(0,0,can.width,can.height);
+    function clearSky(){
+      ctx.clearRect(0,0,can.width,can.height);
+      // ctx.fillRect(0,0,can.width,can.height);
+    }
+  </script>
+  <script type="text/javascript">
+    var Rain=function(){
+  this.v=[];
+  this.x=[];
+  this.y=[];
+  // this.time=[];
+}
+Rain.prototype.num=100;
+Rain.prototype.init=function(){
+  for(var i=0;i<this.num;i++){
+    var that=this;
+      that.v[i]=(Math.random()+1)*3+10;
+      that.x[i]=document.body.clientWidth*Math.random()+1;
+      that.y[i]=0;
+      // that.time[i]=document.body.clientHeight/that.v[i];
+  }
+}
+Rain.prototype.move=function(){
+  for(var i=0;i<this.num;i++){
+    this.reborn(i);
+    ctx.beginPath();
+    this.y[i]=this.y[i]+this.v[i];
+    if(walkerX<this.x[i]&&this.x[i]<walkerX+137&&can.height-240<this.y[i]&&this.y[i]<can.height){
+      rains++;
+      // console.log(document.getElementById('step').value);
+
+      step=Number(document.getElementById('step').value);
+      // step=1;
+      this.v.splice(i, 1);
+      this.x.splice(i, 1);
+      this.y.splice(i, 1);
+      // this.time.splice(i, 1);
+      this.born();
+    }
+    ctx.moveTo(this.x[i],this.y[i]+this.v[i]);
+    ctx.lineTo(this.x[i]-1,this.y[i]+20);
+    ctx.lineTo(this.x[i]+1,this.y[i]+20);
+    ctx.closePath();
+    ctx.stroke();
+  }
+}
+Rain.prototype.reborn=function(which){
+  // this.time[which]--;
+  // if(this.y[which]>can.height&&this.time[which]<=0){
+  if(this.y[which]>can.height){
+    this.v[which]=(Math.random()+1)*3+10;
+    this.x[which]=document.body.clientWidth*Math.random()+1;
+    this.y[which]=0;
+    // this.time[i]=document.body.clientHeight/this.v[i];
+  }
+}
+Rain.prototype.born=function(){
+  this.v[100]=(Math.random()+1)*3+10;
+  this.x[100]=document.body.clientWidth*Math.random()+1;
+  this.y[100]=0;
+  // this.time[100]=document.body.clientHeight/this.v[i];
+}
+  </script>
+  <script>
+    var imgObj0 = new Image();
+    var imgObj1 = new Image();
+    var imgObj2 = new Image();
+    var imgObj3 = new Image();
+    var imgObj4 = new Image();
+      imgObj0.src = "https://thumbnail0.baidupcs.com/thumbnail/bb7de06823df406fab4209a4c21a936b?fid=1747392380-250528-327994699261771&time=1526216400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-JT4gTaVxvj6hnSq5WNoi7pMa8bI%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3082151262430367382&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video";
+      imgObj1.src = "https://thumbnail0.baidupcs.com/thumbnail/9ddd1c23f8cad710533949b968f9c5e1?fid=1747392380-250528-361490051143425&time=1526216400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-BCSzhtdwgRaCsFhYaJYSKDzQ7ko%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3082168303969570866&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video";
+      imgObj2.src = "https://thumbnail0.baidupcs.com/thumbnail/48f36664992527ec896cd09c50f7ac27?fid=1747392380-250528-786574789787144&time=1526216400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-J0SFROzWafuZK1EsxrNcAj45WTg%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3082177434285101482&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video";
+      imgObj3.src = "https://thumbnail0.baidupcs.com/thumbnail/566dc4f99b1f48aa18759a1819b525c8?fid=1747392380-250528-161764276981554&time=1526216400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-vQmGStcx0WD3x8xO66HKqa%2FV%2BMM%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3082186541554897725&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video";
+      imgObj4.src = "https://thumbnail0.baidupcs.com/thumbnail/3c17107ff6e463bb3a29d7edecf9a974?fid=1747392380-250528-628890300476334&time=1526216400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-bKcRkvGcae4xzUeJr9JT5JGCO8s%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3082194361311864940&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video";
+    var walker=[imgObj0,imgObj1,imgObj2,imgObj3,imgObj4];
+    var i=0;
+    var walkerX=0;
+    var walkerTime;
+    var rains=0;
+    var step=0;
+    var getRainsArr=[];
+    var time=0;
+    function walk(){
+      finish();
+      walkerTime=setInterval(function(){
+        i=i%5;
+        clearSky();
+        if(walkerX>can.width){
+          finish();
+          calculate();
+        }
+        ctx.drawImage(walker[i],walkerX+=step,can.height-240);
+        i++;
+      },100)
+    }
+    function finish(){
+      clearInterval(walkerTime);
+      clearInterval(rainTime);
+      
+    }
+    function calculate(){
+      var showRains=document.getElementById('getRains');
+      showRains.innerHTML='一共打到'+rains/time+'个雨点！';
+    }
+  </script>
+  <script type="text/javascript">
+    var rainTime;
+    function star(){
+      time++;
+      walkerX=0;
+      var rain=new Rain();
+      rain.init();
+      walk();
+
+      rainTime=setInterval(function() {
+        rain.move();
+      },60)
+    }
+  </script>
+
+      <div class="page-footer">
+        <div class="page-share">
+        <a href="http://service.weibo.com/share/share.php?url=http://localhost:4000/rain/&title=下雨了" title="分享到微博" rel="nofollow" target="_blank">微博</a>
+          <!-- <a href="https://twitter.com/intent/tweet?text=下雨了&url=http://localhost:4000/rain/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> -->
+          <!-- <a href="https://facebook.com/sharer.php?u=http://localhost:4000/rain/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a> -->
+          <!-- <a href="https://plus.google.com/share?url=http://localhost:4000/rain/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a> -->
+        </div>
+        <div class="page-tag">
+          
+            <a href="/benjamin-pan.github.io/tags#javascript" class="tag">&#35; javascript</a>
+          
+            <a href="/benjamin-pan.github.io/tags#js" class="tag">&#35; js</a>
+          
+            <a href="/benjamin-pan.github.io/tags#Interesting" class="tag">&#35; Interesting</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
