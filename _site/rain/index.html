@@ -133,7 +133,7 @@
   <script type="text/javascript">
     var can=document.getElementById('sky');
     can.width=document.body.clientWidth-300;
-    can.height=document.documentElement.clientHeight-100;
+    can.height=Math.max(document.documentElement.clientHeight-100,500);
     // ctx.beginPath();
     var ctx=can.getContext('2d');
     ctx.fillStyle='rgba(0,0,0,0)';
