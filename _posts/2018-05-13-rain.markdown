@@ -88,11 +88,11 @@ Rain.prototype.born=function(){
     var imgObj2 = new Image();
     var imgObj3 = new Image();
     var imgObj4 = new Image();
-      imgObj0.src = "https://thumbnail0.baidupcs.com/thumbnail/bb7de06823df406fab4209a4c21a936b?fid=1747392380-250528-327994699261771&time=1526216400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-JT4gTaVxvj6hnSq5WNoi7pMa8bI%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3082151262430367382&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video";
-      imgObj1.src = "https://thumbnail0.baidupcs.com/thumbnail/9ddd1c23f8cad710533949b968f9c5e1?fid=1747392380-250528-361490051143425&time=1526216400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-BCSzhtdwgRaCsFhYaJYSKDzQ7ko%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3082168303969570866&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video";
-      imgObj2.src = "https://thumbnail0.baidupcs.com/thumbnail/48f36664992527ec896cd09c50f7ac27?fid=1747392380-250528-786574789787144&time=1526216400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-J0SFROzWafuZK1EsxrNcAj45WTg%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3082177434285101482&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video";
-      imgObj3.src = "https://thumbnail0.baidupcs.com/thumbnail/566dc4f99b1f48aa18759a1819b525c8?fid=1747392380-250528-161764276981554&time=1526216400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-vQmGStcx0WD3x8xO66HKqa%2FV%2BMM%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3082186541554897725&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video";
-      imgObj4.src = "https://thumbnail0.baidupcs.com/thumbnail/3c17107ff6e463bb3a29d7edecf9a974?fid=1747392380-250528-628890300476334&time=1526216400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-bKcRkvGcae4xzUeJr9JT5JGCO8s%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3082194361311864940&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video";
+      imgObj0.src = "http://par5l10v3.bkt.clouddn.com/walking-man-1.png";
+      imgObj1.src = "http://par5l10v3.bkt.clouddn.com/walking-man-2.png";
+      imgObj2.src = "http://par5l10v3.bkt.clouddn.com/walking-man-3.png";
+      imgObj3.src = "http://par5l10v3.bkt.clouddn.com/walking-man-4.png";
+      imgObj4.src = "http://par5l10v3.bkt.clouddn.com/walking-man-5.png";
     var walker=[imgObj0,imgObj1,imgObj2,imgObj3,imgObj4];
     var i=0;
     var walkerX=0;
