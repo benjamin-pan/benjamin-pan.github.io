@@ -6,12 +6,12 @@ description: 分页
 tags: [javascript, js, html, css]
 ---
 
-<link rel="stylesheet" href="http://par5l10v3.bkt.clouddn.com/ued.css" />
+<link rel="stylesheet" href="http://github.zhihuilife.info/css/ued.css" />
 
 <div style="text-align: center"><div id="pagination"></div></div>
 
-<script type="text/javascript" src="http://par5l10v3.bkt.clouddn.com/js/jquery.js"></script>
-<script type="text/javascript" src="http://par5l10v3.bkt.clouddn.com/js/pagination.js"></script>
+<script type="text/javascript" src="http://github.zhihuilife.info/js/jquery.js"></script>
+<script type="text/javascript" src="http://github.zhihuilife.info/js/pagination.js"></script>
 <script type="text/javascript">
   Pagination({
      activeIndex: 1,
@@ -37,12 +37,12 @@ tags: [javascript, js, html, css]
 ### 使用方法
 
 在需要使用分页的页面引入以下资源，路径自行调整。
-<a href="http://par5l10v3.bkt.clouddn.com/css/ued.css" download>下载css</a>
-<a href="http://par5l10v3.bkt.clouddn.com/js/pagination.js" download>下载js</a>
+<a href="http://github.zhihuilife.info/css/ued.css" download>下载css</a>
+<a href="http://github.zhihuilife.info/js/pagination.js" download>下载js</a>
 <a href="https://github.com/benjamin-pan/pagination" download>完整demo下载</a>
 ```
-<link rel="stylesheet" href="http://par5l10v3.bkt.clouddn.com/css/ued.css" />
-<script type="text/javascript" src="http://par5l10v3.bkt.clouddn.com/js/pagination.js"></script>
+<link rel="stylesheet" href="http://github.zhihuilife.info/css/ued.css" />
+<script type="text/javascript" src="http://github.zhihuilife.info/js/pagination.js"></script>
 ```
 
 提供一个分页的插槽，id尽量唯一，这里是pagination。如果不唯一，会出现问题，而且还不报错，bug很难调试。
