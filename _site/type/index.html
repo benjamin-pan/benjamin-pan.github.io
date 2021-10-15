@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript类型判断 - Hello! I'm 潘杭彬</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello! I'm 潘杭彬" property="og:site_name">
+  
+    <meta content="JavaScript类型判断" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="JavaScript类型判断总结" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/type/" property="og:url">
+  
+  
+    <meta content="2021-10-12T21:15:00+08:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/benjamin-pan.github.io/assets/img/me.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="javascript" property="article:tag">
+    
+    <meta content="js" property="article:tag">
+    
+    <meta content="nodeJs" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="JavaScript类型判断">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/type/">
+  
+  
+    <meta name="twitter:description" content="JavaScript类型判断总结">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/benjamin-pan.github.io/assets/img/me.jpg">
+  
+
+	<meta name="description" content="JavaScript类型判断总结">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/benjamin-pan.github.io/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/benjamin-pan.github.io/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/benjamin-pan.github.io/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/benjamin-pan.github.io/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/benjamin-pan.github.io/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/benjamin-pan.github.io/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/benjamin-pan.github.io/"><img src="/benjamin-pan.github.io/assets/img/me.jpg" alt="潘杭彬"></a>
+      </div>
+      <div class="author-name">潘杭彬</div>
+      <p>不积跬步无以至千里，不积小流无以成江海</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/artemsheludko" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:benjamin_panpan@hotmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2021 &copy; 潘杭彬</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">JavaScript类型判断</h1>
+        <div class="page-date"><span>2021, Oct 12&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <h3 id="javascript类型罗列">JavaScript类型罗列</h3>
+
+<ul>
+  <li>基本类型：Number、String、Boolean、Undefined、Null、Symbol、BigInt</li>
+  <li>引用类型：Function、Array、Object、Date、RegExp</li>
+</ul>
+
+<h3 id="创建类型">创建类型</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var fn = function () {}
+var number = 1
+var str = '1'
+var arr = []
+var obj = {}
+var boolean = true
+var undef
+var nu = null
+var symbol = Symbol()
+var big = 9007199254740995n
+var day = new Date()
+var regExp = new RegExp(/[a-z]/)
+</code></pre></div></div>
+
+<h3 id="typeof判断类型运行结果看控制台">typeof判断类型（运行结果看控制台）</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log('typeof number:', typeof number)
+console.log('typeof str:', typeof str)
+console.log('typeof fn:', typeof fn)
+console.log('typeof arr:', typeof arr)
+console.log('typeof obj:', typeof obj)
+console.log('typeof boolean:', typeof boolean)
+console.log('typeof undef:', typeof undef)
+console.log('typeof nu:', typeof nu)
+console.log('typeof symbol:', typeof symbol)
+console.log('typeof big:', typeof big)
+console.log('typeof day:', typeof day)
+console.log('typeof regExp:', typeof regExp)
+</code></pre></div></div>
+
+<h3 id="objectprototypetostringcall判断类型运行结果看控制台">Object.prototype.toString.call判断类型（运行结果看控制台）</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log('Object.prototype.toString.call(number):', Object.prototype.toString.call(number))
+console.log('Object.prototype.toString.call(str):', Object.prototype.toString.call(str))
+console.log('Object.prototype.toString.call(fn):', Object.prototype.toString.call(fn))
+console.log('Object.prototype.toString.call(arr):', Object.prototype.toString.call(arr))
+console.log('Object.prototype.toString.call(obj):', Object.prototype.toString.call(obj))
+console.log('Object.prototype.toString.call(boolean):', Object.prototype.toString.call(boolean))
+console.log('Object.prototype.toString.call(undef):', Object.prototype.toString.call(undef))
+console.log('Object.prototype.toString.call(nu):', Object.prototype.toString.call(nu))
+console.log('Object.prototype.toString.call(symbol):', Object.prototype.toString.call(symbol))
+console.log('Object.prototype.toString.call(big):', Object.prototype.toString.call(big))
+console.log('Object.prototype.toString.call(day):', Object.prototype.toString.call(day))
+console.log('Object.prototype.toString.call(regExp):', Object.prototype.toString.call(regExp))
+</code></pre></div></div>
+
+<h3 id="constructor判断类型运行结果看控制台">constructor判断类型（运行结果看控制台）</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log('number.constructor:', number.constructor)
+console.log('str.constructor:', str.constructor)
+console.log('fn.constructor:', fn.constructor)
+console.log('arr.constructor:', arr.constructor)
+console.log('obj.constructor:', obj.constructor)
+console.log('boolean.constructor:', boolean.constructor)
+// console.log('undef.constructor:', undef.constructor)
+// console.log('nu.constructor:', nu.constructor)
+console.log('symbol.constructor:', symbol.constructor)
+console.log('big.constructor:', big.constructor)
+console.log('day.constructor:', day.constructor)
+console.log('regExp.constructor:', regExp.constructor)
+</code></pre></div></div>
+
+<h3 id="鸭子类型">鸭子类型</h3>
+
+<p>long long ago, 在JS王国里，有一个国王，他觉得世界上最美妙的声音就是鸭子的叫声，于是国王召集大臣，要组建一个1000只鸭子组成的合唱团。大臣们找遍了全国，终于找到999只鸭子，但是始终还差一只，最后大臣发现有一只非常特别的鸡，它的叫声跟鸭子一模一样，于是这只鸡就成为了合唱团的最后一员。
+鸭子类型，“如果它走起来像鸭子，而且叫起来像鸭子，那么它就是鸭子”。</p>
+
+<h3 id="总结">总结</h3>
+
+<ul>
+  <li>typeof可以判断区分基本类型，null是个例外</li>
+  <li>Object.prototype.toString.call可以区分所有类型</li>
+  <li>instanceof可以判断引用类型</li>
+  <li>constructor除了undefined和null报错外可以去区分他的类型</li>
+  <li>问题：Number类型下的NaN和Infinity怎么判断</li>
+</ul>
+
+<script type="text/javascript">
+var fn = function () {}
+var number = 1
+var str = '1'
+var arr = []
+var obj = {}
+var boolean = true
+var undef
+var nu = null
+var symbol = Symbol()
+var big = 9007199254740995n
+var day = new Date()
+var regExp = new RegExp(/[a-z]/)
+
+console.log('typeof number:', typeof number)
+console.log('typeof str:', typeof str)
+console.log('typeof fn:', typeof fn)
+console.log('typeof arr:', typeof arr)
+console.log('typeof obj:', typeof obj)
+console.log('typeof boolean:', typeof boolean)
+console.log('typeof undef:', typeof undef)
+console.log('typeof nu:', typeof nu)
+console.log('typeof symbol:', typeof symbol)
+console.log('typeof big:', typeof big)
+console.log('typeof day:', typeof day)
+console.log('typeof regExp:', typeof regExp)
+
+console.log('Object.prototype.toString.call(number):', Object.prototype.toString.call(number))
+console.log('Object.prototype.toString.call(str):', Object.prototype.toString.call(str))
+console.log('Object.prototype.toString.call(fn):', Object.prototype.toString.call(fn))
+console.log('Object.prototype.toString.call(arr):', Object.prototype.toString.call(arr))
+console.log('Object.prototype.toString.call(obj):', Object.prototype.toString.call(obj))
+console.log('Object.prototype.toString.call(boolean):', Object.prototype.toString.call(boolean))
+console.log('Object.prototype.toString.call(undef):', Object.prototype.toString.call(undef))
+console.log('Object.prototype.toString.call(nu):', Object.prototype.toString.call(nu))
+console.log('Object.prototype.toString.call(symbol):', Object.prototype.toString.call(symbol))
+console.log('Object.prototype.toString.call(big):', Object.prototype.toString.call(big))
+console.log('Object.prototype.toString.call(day):', Object.prototype.toString.call(day))
+console.log('Object.prototype.toString.call(regExp):', Object.prototype.toString.call(regExp))
+
+console.log('number instanceof Number:', number instanceof Number)
+console.log('str instanceof String:', str instanceof String)
+console.log('fn instanceof Function:', fn instanceof Function)
+console.log('arr instanceof Array:', arr instanceof Array)
+console.log('obj instanceof Object:', obj instanceof Object)
+console.log('boolean instanceof Boolean:', boolean instanceof Boolean)
+console.log('undef instanceof undefined:', undef instanceof Object)
+console.log('nu instanceof Null:', nu instanceof Object)
+console.log('symbol instanceof Symbol:', symbol instanceof Symbol)
+console.log('big instanceof BigInt:', big instanceof BigInt)
+console.log('day instanceof Date:', day instanceof Date)
+console.log('regExp instanceof RegExp:', regExp instanceof RegExp)
+
+console.log('number.constructor:', number.constructor)
+console.log('str.constructor:', str.constructor)
+console.log('fn.constructor:', fn.constructor)
+console.log('arr.constructor:', arr.constructor)
+console.log('obj.constructor:', obj.constructor)
+console.log('boolean.constructor:', boolean.constructor)
+// console.log('undef.constructor:', undef.constructor)
+// console.log('nu.constructor:', nu.constructor)
+console.log('symbol.constructor:', symbol.constructor)
+console.log('big.constructor:', big.constructor)
+console.log('day.constructor:', day.constructor)
+console.log('regExp.constructor:', regExp.constructor)
+</script>
+
+
+      <div class="page-footer">
+        <div class="page-share">
+        <a href="http://service.weibo.com/share/share.php?url=http://localhost:4000/type/&title=JavaScript类型判断" title="分享到微博" rel="nofollow" target="_blank">微博</a>
+          <!-- <a href="https://twitter.com/intent/tweet?text=JavaScript类型判断&url=http://localhost:4000/type/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> -->
+          <!-- <a href="https://facebook.com/sharer.php?u=http://localhost:4000/type/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a> -->
+          <!-- <a href="https://plus.google.com/share?url=http://localhost:4000/type/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a> -->
+        </div>
+        <div class="page-tag">
+          
+            <a href="/benjamin-pan.github.io/tags#javascript" class="tag">&#35; javascript</a>
+          
+            <a href="/benjamin-pan.github.io/tags#js" class="tag">&#35; js</a>
+          
+            <a href="/benjamin-pan.github.io/tags#nodeJs" class="tag">&#35; nodeJs</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <!--<script>-->
+      <!--(function() {-->
+          <!--var d = document, s = d.createElement('script');-->
+          <!--s.src = '//mr-brown.disqus.com/embed.js';-->
+          <!--s.setAttribute('data-timestamp', +new Date());-->
+          <!--(d.head || d.body).appendChild(s);-->
+      <!--})();-->
+    <!--</script>-->
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
