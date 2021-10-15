@@ -117,7 +117,7 @@
       </ul>
     </section> <!-- End Section Contact -->
     <div class="copyright">
-      <p>2018 &copy; 潘杭彬</p>
+      <p>2021 &copy; 潘杭彬</p>
     </div>
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
@@ -146,23 +146,23 @@
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 1、借鸡生蛋</span>
 <span class="kd">function</span> <span class="nx">fn_bind</span><span class="p">(){</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kr">arguments</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
   <span class="c1">// console.log(arguments.join());  报错没有join方法</span>
   <span class="c1">// 给arguments添加join方法</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">join</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kr">arguments</span><span class="p">));</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">join</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kr">arguments</span><span class="p">));</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">join</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kr">arguments</span><span class="p">)());</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">join</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">arguments</span><span class="p">));</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">join</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">));</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">join</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">arguments</span><span class="p">)());</span>
 <span class="p">}</span>
-<span class="nx">fn_bind</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">,</span><span class="s1">'d'</span><span class="p">);</span>
+<span class="nx">fn_bind</span><span class="p">(</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">d</span><span class="dl">'</span><span class="p">);</span>
 
 
 <span class="c1">// 2、和this一起使用，绑定上下文,this指向apply和call的第一个参数，不传参默认为全局对象（浏览器：window）</span>
-<span class="kd">var</span> <span class="nx">word</span><span class="o">=</span><span class="s1">'this is window'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">word</span><span class="o">=</span><span class="dl">'</span><span class="s1">this is window</span><span class="dl">'</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">duck</span><span class="o">=</span><span class="p">{</span>
-  <span class="na">word</span><span class="p">:</span><span class="s1">'嘎嘎嘎嘎'</span>
+  <span class="na">word</span><span class="p">:</span><span class="dl">'</span><span class="s1">嘎嘎嘎嘎</span><span class="dl">'</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">cat</span><span class="o">=</span><span class="p">{</span>
-  <span class="na">word</span><span class="p">:</span><span class="s1">'喵喵喵喵'</span>
+  <span class="na">word</span><span class="p">:</span><span class="dl">'</span><span class="s1">喵喵喵喵</span><span class="dl">'</span>
 <span class="p">}</span>
 <span class="kd">function</span> <span class="nx">speak</span><span class="p">(){</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
@@ -177,12 +177,12 @@
 
 <span class="c1">// 3、执行函数</span>
 <span class="kd">function</span> <span class="nx">fn</span> <span class="p">(</span><span class="nx">who</span><span class="p">,</span> <span class="nx">word</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">who</span> <span class="o">+</span> <span class="s1">':'</span> <span class="o">+</span> <span class="nx">word</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">who</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">:</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">word</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">[</span><span class="s1">'duck'</span><span class="p">,</span> <span class="s1">'嘎嘎嘎嘎'</span><span class="p">]);</span>
-<span class="nx">fn</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s1">'cat'</span><span class="p">,</span> <span class="s1">'喵喵喵喵'</span><span class="p">);</span>
-<span class="nx">fn</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s1">'dog'</span><span class="p">,</span> <span class="s1">'汪汪汪汪'</span><span class="p">)();</span>
+<span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">[</span><span class="dl">'</span><span class="s1">duck</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">嘎嘎嘎嘎</span><span class="dl">'</span><span class="p">]);</span>
+<span class="nx">fn</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="dl">'</span><span class="s1">cat</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">喵喵喵喵</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">fn</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="dl">'</span><span class="s1">dog</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">汪汪汪汪</span><span class="dl">'</span><span class="p">)();</span>
 </code></pre></div></div>
 
 <h3 id="区别">区别</h3>
@@ -215,14 +215,14 @@ call()和bind()，bind()返回的是一个函数需要执行一下，参照使�
   <div class="comment-wrapper">
     
     <div id="disqus_thread" class="article-comments"></div>
-    <script>
-      (function() {
-          var d = document, s = d.createElement('script');
-          s.src = '//mr-brown.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-      })();
-    </script>
+    <!--<script>-->
+      <!--(function() {-->
+          <!--var d = document, s = d.createElement('script');-->
+          <!--s.src = '//mr-brown.disqus.com/embed.js';-->
+          <!--s.setAttribute('data-timestamp', +new Date());-->
+          <!--(d.head || d.body).appendChild(s);-->
+      <!--})();-->
+    <!--</script>-->
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     
   </div>
