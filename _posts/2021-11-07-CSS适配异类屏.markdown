@@ -1,0 +1,76 @@
+---
+layout: post
+title: CSS适配异类屏
+date: 2021-11-07 11:34:00 +0800
+description: 使用CSS适配异类屏幕
+tags: [CSS]
+---
+
+### 起因
+
+iPhoneX等不规则屏幕的出现增加了适配的成本，各浏览器表现不佳，其中微信小程序端表现如下：
+<table>
+    <thead>
+        <tr>
+            <td></td>
+            <td>普通安卓机</td>
+            <td>iPhone11</td>
+        </tr>
+    </thead>
+<tr>
+    <td>未适配</td>
+    <td><img src='http://github.zhihuilife.info/safe-area-inset-no-normal.jpeg' height=200 alt='普通安卓未适配' /></td>
+    <td><img src='http://github.zhihuilife.info/safe-area-inset-no-special.jpeg' height=200 alt='iPhone11未适配' /></td>
+</tr>
+<tr>
+    <td>已适配</td>
+    <td><img src='http://github.zhihuilife.info/safe-area-inset-has-normal.jpeg' height=200 alt='普通安卓已适配' /></td>
+    <td><img src='http://github.zhihuilife.info/safe-area-inset-has-special.jpeg' height=200 alt='iPhone11已适配' /></td>
+</tr>
+</table>
+
+
+
+### 解决方案
+
+```
+safe-area-inset-top
+safe-area-inset-right
+safe-area-inset-bottom
+safe-area-inset-left
+```
+
+
+
+### 使用
+#### iOS 11
+```
+padding-top: constant(safe-area-inset-top);
+padding-right: constant(safe-area-inset-right);
+padding-bottom: constant(safe-area-inset-bottom);
+padding-left: constant(safe-area-inset-left);
+```
+
+#### iOS 11.2 beta及其后
+```
+padding-top: env(safe-area-inset-top);
+padding-right: env(safe-area-inset-right);
+padding-bottom: env(safe-area-inset-bottom);
+padding-left: env(safe-area-inset-left);
+```
+
+#### 兼容性写法：
+```
+padding-top: 10px;
+padding-top: calc(10px + constant(safe-area-inset-top));
+padding-top: calc(10px + env(safe-area-inset-top));
+```
+
+### 终！使用sass@mixin：
+```
+@mixin x-padding-bottom($val:0px) {
+  padding-bottom: $val;
+  padding-bottom: calc(#{$val / 2} + constant(safe-area-inset-bottom)); /* no */
+  padding-bottom: calc(#{$val / 2} + env(safe-area-inset-bottom)); /* no */
+}
+```
